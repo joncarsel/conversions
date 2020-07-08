@@ -3,11 +3,12 @@ export default function sayHello(name) {
 }
 
 export function binaryToDecimalOf(bin) {
-  var decimal = 0;
-  for (let index = bin.length - 1; index >= 0; index--) {
-    decimal += parseInt(bin[index]) * Math.pow(2, bin.length - 1 - index);
-  }
-  return decimal;
+    bin = bin.toString();
+    var decimal = 0;
+    for (let index = bin.length - 1; index >= 0; index--) {
+        decimal += parseInt(bin[index]) * Math.pow(2, bin.length - 1 - index);
+    }
+    return decimal;
 }
 
 export function decimalToBinaryOf(decimal) {
@@ -29,4 +30,3 @@ export function decimalToBinaryOf(decimal) {
     }
     return binary;
 }
-
